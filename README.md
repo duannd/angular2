@@ -1,7 +1,7 @@
 # Angular 8.1.0
 1. Prerequisite
-  npm -v : 6.9.0
-  node -v : v10.16.0
+  - npm -v : 6.9.0
+  - node -v : v10.16.0
 
 ---
 ## List tutorials 
