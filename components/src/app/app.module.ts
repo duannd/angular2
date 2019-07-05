@@ -1,9 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { DisplayingDataComponent } from './displaying-data/displaying-data.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {DisplayingDataComponent} from './displaying-data/displaying-data.component';
+import {TemplateModule} from './template/template.module';
 
 @NgModule({
   declarations: [
@@ -12,9 +13,11 @@ import { DisplayingDataComponent } from './displaying-data/displaying-data.compo
   ],
   imports: [
     BrowserModule,
+    TemplateModule,
     AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
