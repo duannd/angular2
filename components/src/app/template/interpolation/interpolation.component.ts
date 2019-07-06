@@ -9,6 +9,8 @@ export class InterpolationComponent implements OnInit {
 
   currentCustomer: string;
   count: number;
+  imageUrl: string;
+  imageAlt = 'Angular Avatar';
 
   constructor() {
   }
@@ -16,6 +18,7 @@ export class InterpolationComponent implements OnInit {
   ngOnInit() {
     this.count = 0;
     this.currentCustomer = 'Danny';
+    this.imageUrl = '';
     setInterval(() => {
       this.count++;
     }, 1000);
