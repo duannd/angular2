@@ -1,3 +1,15 @@
 <p>statements works!</p>
 <button type="button" (click)="showMyName()">Show my name</button>
 <p *ngIf="myName">{{myName}}</p>
+<br/>
+<hr />
+<h3>HTML attribute vs. DOM property</h3>
+<label>
+  <input #customInput type="text" [value]="myName ? myName : 'Sara'">
+  Value Attributes:: {{customInput.getAttribute('value')}}
+</label>
+<p>
+  <button [disabled]="myName">Test Button</button>
+</p>
+
+
