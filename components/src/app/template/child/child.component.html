@@ -1,0 +1,9 @@
+<p *ngIf="childItem">
+  <span>Child Item:: {{childItem}}</span>
+</p>
+<div *ngIf="items">
+  <p>Items:</p>
+  <ul>
+    <li *ngFor="let item of items">{{item}}</li>
+  </ul>
+</div>

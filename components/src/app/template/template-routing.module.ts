@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {TemplateSyntaxComponent} from './template-syntax.component';
 import {InterpolationComponent} from './interpolation/interpolation.component';
 import {StatementsComponent} from './statements/statements.component';
+import {BindingPropretyComponent} from './binding-proprety/binding-proprety.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
     component: TemplateSyntaxComponent,
     children: [
       {path: 'interpolation', component: InterpolationComponent},
-      {path: 'statements', component: StatementsComponent}
+      {path: 'statements', component: StatementsComponent},
+      {path: 'binding-property', component: BindingPropretyComponent}
     ]
   }
 ];

@@ -1,0 +1,41 @@
+<p>binding-proprety works!</p>
+<p>
+  <img [src]="itemImageUrl" alt="Binding Property by [src]">
+  <img bind-src="itemImageUrl" alt="Binding Property by bind-src">
+</p>
+<div>
+  <table>
+    <tbody>
+    <tr>
+      <td>Column 1</td>
+      <td>Column 2</td>
+    </tr>
+    <tr style="text-align: center">
+      <td [colSpan]="2">Span 2 columns</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<p [ngClass]="classes">[ngClass] binding to the classes property making this blue</p>
+
+<hr/>
+<h3>Parent-Child components</h3>
+<p>
+  <app-parent></app-parent>
+</p>
+
+<hr />
+<h3>Property binding vs. interpolation</h3>
+<p><img src="{{itemImageUrl}}"> is the <i>interpolated</i> image.</p>
+<p><img [src]="itemImageUrl"> is the <i>property bound</i> image.</p>
+
+<p><span>"{{interpolationTitle}}" is the <i>interpolated</i> title.</span></p>
+<p>"<span [innerHTML]="propertyTitle"></span>" is the <i>property bound</i> title.</p>
+
+<p><span>"{{evilTitle}}" is the <i>interpolated</i> evil title.</span></p>
+<!--
+ Angular generates a warning for the following line as it sanitizes them
+ WARNING: sanitizing HTML stripped some content (see http://g.co/ng/security#xss).
+-->
+<p>"<span [innerHTML]="evilTitle"></span>" is the <i>property bound</i> evil title.</p>
+
