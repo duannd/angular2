@@ -1,0 +1,26 @@
+<p>binding-others works!</p>
+<hr />
+<!-- create and set an aria attribute for assistive technology -->
+<h4>Attribute binding</h4>
+<p>
+  <button [attr.aria-label]="actionName">{{actionName}} with Aria</button>
+</p>
+
+<hr/>
+<h4>Class binding</h4>
+<h5>Overwrite all existing classes with a new class:</h5>
+<div class="item clearance special" [attr.class]="resetClasses">Reset all classes at once</div>
+<h5>Add a class:</h5>
+<div class="item clearance special" [class.item-clearance]="itemClearance">Add another class</div>
+
+<hr />
+<h4>Style Binding</h4>
+<p>
+  <button [style.color]="isSpecial ? 'red': 'green'">Red</button>
+  <button style="margin-left: 30px" [style.background-color]="canSave ? 'cyan': 'grey'" >Save</button>
+</p>
+<p>
+  <button [style.fontSize.em]="isSpecial ? 3 : 1" >Big</button>
+  <button style="margin-left: 30px" [style.font-size.%]="!isSpecial ? 150 : 50" >Small</button>
+</p>
+

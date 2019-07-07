@@ -8,6 +8,7 @@ import { StatementsComponent } from './statements/statements.component';
 import { BindingPropretyComponent } from './binding-proprety/binding-proprety.component';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
+import { BindingOthersComponent } from './binding-others/binding-others.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ParentComponent } from './parent/parent.component';
     StatementsComponent,
     BindingPropretyComponent,
     ChildComponent,
-    ParentComponent
+    ParentComponent,
+    BindingOthersComponent
   ],
   imports: [
     CommonModule,

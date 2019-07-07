@@ -4,6 +4,7 @@ import {TemplateSyntaxComponent} from './template-syntax.component';
 import {InterpolationComponent} from './interpolation/interpolation.component';
 import {StatementsComponent} from './statements/statements.component';
 import {BindingPropretyComponent} from './binding-proprety/binding-proprety.component';
+import {BindingOthersComponent} from './binding-others/binding-others.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
     children: [
       {path: 'interpolation', component: InterpolationComponent},
       {path: 'statements', component: StatementsComponent},
-      {path: 'binding-property', component: BindingPropretyComponent}
+      {path: 'binding-property', component: BindingPropretyComponent},
+      {path: 'binding-others', component: BindingOthersComponent}
     ]
   }
 ];
