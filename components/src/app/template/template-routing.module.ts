@@ -7,6 +7,7 @@ import {BindingPropretyComponent} from './binding-proprety/binding-proprety.comp
 import {BindingOthersComponent} from './binding-others/binding-others.component';
 import {BindingEventComponent} from './binding-event/binding-event.component';
 import {TwoWayBindingComponent} from './two-way-binding/two-way-binding.component';
+import {BuiltInDirectivesComponent} from './built-in-directives/built-in-directives.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
       {path: 'binding-property', component: BindingPropretyComponent},
       {path: 'binding-others', component: BindingOthersComponent},
       {path: 'binding-event', component: BindingEventComponent},
-      {path: 'two-way-binding', component: TwoWayBindingComponent}
+      {path: 'two-way-binding', component: TwoWayBindingComponent},
+      {path: 'built-in-directives', component: BuiltInDirectivesComponent},
     ]
   }
 ];

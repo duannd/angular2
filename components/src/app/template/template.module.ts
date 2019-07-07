@@ -13,6 +13,7 @@ import { BindingEventComponent } from './binding-event/binding-event.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { SizerComponent } from './sizer/sizer.component';
 import {FormsModule} from '@angular/forms';
+import { BuiltInDirectivesComponent } from './built-in-directives/built-in-directives.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {FormsModule} from '@angular/forms';
     BindingOthersComponent,
     BindingEventComponent,
     TwoWayBindingComponent,
-    SizerComponent
+    SizerComponent,
+    BuiltInDirectivesComponent
   ],
   imports: [
     CommonModule,

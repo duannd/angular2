@@ -1,0 +1,13 @@
+<p>built-in-directives works!</p>
+<!-- toggle the "special" class on/off with a property -->
+<div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
+<div [ngClass]="currentClasses">This div is initially saveable, unchanged, and special.</div>
+
+<hr/>
+<h4>Without NgStyle</h4>
+<div [style.font-size]="isSpecial ? 'x-large' : 'smaller'">
+  This div is x-large or smaller.
+</div>
+<div [ngStyle]="currentStyles">
+  This div is initially italic, normal weight, and extra large (24px).
+</div>
