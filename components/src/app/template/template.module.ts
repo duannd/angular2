@@ -9,6 +9,7 @@ import { BindingPropretyComponent } from './binding-proprety/binding-proprety.co
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { BindingOthersComponent } from './binding-others/binding-others.component';
+import { BindingEventComponent } from './binding-event/binding-event.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { BindingOthersComponent } from './binding-others/binding-others.componen
     BindingPropretyComponent,
     ChildComponent,
     ParentComponent,
-    BindingOthersComponent
+    BindingOthersComponent,
+    BindingEventComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,17 @@
+<p>binding-event works!</p>
+<button id="saveBtn" (click)="onSave($event)">Save</button>
+<button id="onSaveBtn" on-click="onSave($event)">on-click Save</button>
+
+<h4>myClick is an event on the custom ClickDirective:</h4>
+<button (myClick)="clickMessage=$event" clickable>click with myClick</button>
+{{clickMessage}}
+
+<p>
+  <input [value]="currentItem.name"
+         (input)="currentItem.name=$event.target.value" >
+  without NgModel: {{currentItem.name}}
+</p>
+
+<hr />
+<h4>Custom events with EventEmitter</h4>
+<app-parent (deleteRequest)="onDeleteRequest($event)"></app-parent>

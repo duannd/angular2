@@ -5,6 +5,7 @@ import {InterpolationComponent} from './interpolation/interpolation.component';
 import {StatementsComponent} from './statements/statements.component';
 import {BindingPropretyComponent} from './binding-proprety/binding-proprety.component';
 import {BindingOthersComponent} from './binding-others/binding-others.component';
+import {BindingEventComponent} from './binding-event/binding-event.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
       {path: 'interpolation', component: InterpolationComponent},
       {path: 'statements', component: StatementsComponent},
       {path: 'binding-property', component: BindingPropretyComponent},
-      {path: 'binding-others', component: BindingOthersComponent}
+      {path: 'binding-others', component: BindingOthersComponent},
+      {path: 'binding-event', component: BindingEventComponent}
     ]
   }
 ];
