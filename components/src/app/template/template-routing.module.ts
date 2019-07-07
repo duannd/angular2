@@ -6,6 +6,7 @@ import {StatementsComponent} from './statements/statements.component';
 import {BindingPropretyComponent} from './binding-proprety/binding-proprety.component';
 import {BindingOthersComponent} from './binding-others/binding-others.component';
 import {BindingEventComponent} from './binding-event/binding-event.component';
+import {TwoWayBindingComponent} from './two-way-binding/two-way-binding.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
       {path: 'statements', component: StatementsComponent},
       {path: 'binding-property', component: BindingPropretyComponent},
       {path: 'binding-others', component: BindingOthersComponent},
-      {path: 'binding-event', component: BindingEventComponent}
+      {path: 'binding-event', component: BindingEventComponent},
+      {path: 'two-way-binding', component: TwoWayBindingComponent}
     ]
   }
 ];

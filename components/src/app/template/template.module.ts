@@ -10,6 +10,9 @@ import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { BindingOthersComponent } from './binding-others/binding-others.component';
 import { BindingEventComponent } from './binding-event/binding-event.component';
+import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { SizerComponent } from './sizer/sizer.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -21,11 +24,14 @@ import { BindingEventComponent } from './binding-event/binding-event.component';
     ChildComponent,
     ParentComponent,
     BindingOthersComponent,
-    BindingEventComponent
+    BindingEventComponent,
+    TwoWayBindingComponent,
+    SizerComponent
   ],
   imports: [
     CommonModule,
-    TemplateRoutingModule
+    FormsModule,
+    TemplateRoutingModule,
   ]
 })
 export class TemplateModule {
