@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Hero, HEROES} from '../../hero';
 
 @Component({
   selector: 'app-built-in-directives',
@@ -22,10 +23,15 @@ export class BuiltInDirectivesComponent implements OnInit {
   currentStyles: {};
   count = 0;
 
+  myName: string;
+  myNameUpperCase: string;
+  items: Hero[];
+
   constructor() {
   }
 
   ngOnInit() {
+    this.items = HEROES;
     setInterval(() => {
       this.isSpecial = !this.isSpecial;
       this.count++;
@@ -50,6 +56,18 @@ export class BuiltInDirectivesComponent implements OnInit {
       'font-weight': this.count % 3 === 1 ? 'bold' : 'normal',
       'font-size': this.count % 3 === 2 ? '24px' : '12px'
     };
+  }
+
+  upperCaseName(event) {
+    this.myNameUpperCase = event.toUpperCase();
+  }
+
+  trackByItems(index: number, item: Hero): number {
+    return item.id;
+  }
+
+  countRemain(): number {
+    return this.count % 4;
   }
 
 }

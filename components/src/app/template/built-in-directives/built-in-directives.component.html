@@ -8,6 +8,32 @@
 <div [style.font-size]="isSpecial ? 'x-large' : 'smaller'">
   This div is x-large or smaller.
 </div>
+<hr />
 <div [ngStyle]="currentStyles">
   This div is initially italic, normal weight, and extra large (24px).
+</div>
+
+<h4>NgModel</h4>
+<p>
+  <input [(ngModel)]="myName">Name with ngModel: {{myName}}
+</p>
+<p>
+  <input [ngModel]="myNameUpperCase" (ngModelChange)="upperCaseName($event)">Name upperCase with ngModel: {{myNameUpperCase}}
+</p>
+
+<hr />
+<h4>*ngFor</h4>
+<div>
+  <ul>
+    <li *ngFor="let item of items; let i=index; trackBy: trackByItems">{{i + 1}} - {{item.name}}</li>
+  </ul>
+</div>
+
+<hr/>
+<h4>The NgSwitch directives</h4>
+<div [ngSwitch]="countRemain()">
+  <p *ngSwitchCase="0">Is zero</p>
+  <p *ngSwitchCase="1">Is One</p>
+  <p *ngSwitchCase="2">Is Two</p>
+  <p *ngSwitchDefault>Is Default</p>
 </div>

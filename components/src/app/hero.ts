@@ -5,3 +5,10 @@ export class Hero {
   }
 
 }
+
+export const HEROES: Hero[] = [
+  new Hero(1, 'Danny'),
+  {id: 2, name: 'KH'},
+  {id: 3, name: 'Baby'},
+  {id: 4, name: 'DK'}
+];
