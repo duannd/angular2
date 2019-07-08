@@ -14,6 +14,7 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 import { SizerComponent } from './sizer/sizer.component';
 import {FormsModule} from '@angular/forms';
 import { BuiltInDirectivesComponent } from './built-in-directives/built-in-directives.component';
+import { ReferenceVariablesComponent } from './reference-variables/reference-variables.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { BuiltInDirectivesComponent } from './built-in-directives/built-in-direc
     BindingEventComponent,
     TwoWayBindingComponent,
     SizerComponent,
-    BuiltInDirectivesComponent
+    BuiltInDirectivesComponent,
+    ReferenceVariablesComponent
   ],
   imports: [
     CommonModule,
