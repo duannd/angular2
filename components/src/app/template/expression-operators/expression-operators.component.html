@@ -1,0 +1,17 @@
+<p>expression-operators works!</p>
+<p>Title through uppercase pipe: {{title | uppercase}}</p>
+<!-- convert title to uppercase, then to lowercase -->
+<p>Title through a pipe chain: {{title | uppercase | lowercase}}</p>
+
+<!-- pipe with configuration argument => "February 25, 1980" -->
+<p>Manufacture date with date format pipe: {{item.manufactureDate | date:'longDate'}}</p>
+
+<p>Item json pipe: {{item | json}}</p>
+<p>The item name is: {{item?.name}}</p>
+<!--No color, no error -->
+<p *ngIf="item">The item's color is: {{item.color}}</p>
+
+<hr />
+<h4>Built-in template functions</h4>
+<p>The item's undeclared best by date is: {{$any(item).bestByDate}}</p>
+<p>The item's undeclared best by date is: {{$any(this).title}}</p>

@@ -15,6 +15,7 @@ import { SizerComponent } from './sizer/sizer.component';
 import {FormsModule} from '@angular/forms';
 import { BuiltInDirectivesComponent } from './built-in-directives/built-in-directives.component';
 import { ReferenceVariablesComponent } from './reference-variables/reference-variables.component';
+import { ExpressionOperatorsComponent } from './expression-operators/expression-operators.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ReferenceVariablesComponent } from './reference-variables/reference-var
     TwoWayBindingComponent,
     SizerComponent,
     BuiltInDirectivesComponent,
-    ReferenceVariablesComponent
+    ReferenceVariablesComponent,
+    ExpressionOperatorsComponent
   ],
   imports: [
     CommonModule,
