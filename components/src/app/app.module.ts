@@ -5,11 +5,13 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {DisplayingDataComponent} from './displaying-data/displaying-data.component';
 import {TemplateModule} from './template/template.module';
+import { UserInputComponent } from './user-input/user-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DisplayingDataComponent
+    DisplayingDataComponent,
+    UserInputComponent
   ],
   imports: [
     BrowserModule,
