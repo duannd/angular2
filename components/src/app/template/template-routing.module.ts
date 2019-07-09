@@ -10,6 +10,7 @@ import {TwoWayBindingComponent} from './two-way-binding/two-way-binding.componen
 import {BuiltInDirectivesComponent} from './built-in-directives/built-in-directives.component';
 import {ReferenceVariablesComponent} from './reference-variables/reference-variables.component';
 import {ExpressionOperatorsComponent} from './expression-operators/expression-operators.component';
+import {SvgComponent} from './svg/svg.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
       {path: 'two-way-binding', component: TwoWayBindingComponent},
       {path: 'built-in-directives', component: BuiltInDirectivesComponent},
       {path: 'reference-variables', component: ReferenceVariablesComponent},
-      {path: 'expression-operators', component: ExpressionOperatorsComponent}
+      {path: 'expression-operators', component: ExpressionOperatorsComponent},
+      {path: 'svg', component: SvgComponent}
     ]
   }
 ];

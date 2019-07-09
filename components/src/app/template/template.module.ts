@@ -16,6 +16,7 @@ import {FormsModule} from '@angular/forms';
 import { BuiltInDirectivesComponent } from './built-in-directives/built-in-directives.component';
 import { ReferenceVariablesComponent } from './reference-variables/reference-variables.component';
 import { ExpressionOperatorsComponent } from './expression-operators/expression-operators.component';
+import { SvgComponent } from './svg/svg.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ExpressionOperatorsComponent } from './expression-operators/expression-
     SizerComponent,
     BuiltInDirectivesComponent,
     ReferenceVariablesComponent,
-    ExpressionOperatorsComponent
+    ExpressionOperatorsComponent,
+    SvgComponent
   ],
   imports: [
     CommonModule,
