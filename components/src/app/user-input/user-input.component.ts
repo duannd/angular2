@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class UserInputComponent implements OnInit {
 
   clickMessage = '';
+  keyupValue = '';
 
   constructor() { }
 
@@ -16,5 +17,9 @@ export class UserInputComponent implements OnInit {
 
   onClickMe() {
     this.clickMessage = 'You are my hero!';
+  }
+
+  onKeyup(event: any) {
+    this.keyupValue += event.target.value  + ' | ';
   }
 }

@@ -3,3 +3,8 @@
   <button style="margin-right: 20px" (click)="onClickMe()">Click me!</button> <span>{{clickMessage}}</span>
 </p>
 
+<p><label for="onKeyUpId">Give me some keys!</label></p>
+<p><input id="onKeyUpId" (keyup)="onKeyup($event)"> <span>{{keyupValue}}</span></p>
+
+<p><label for="keyupLoopBack">Keyup loop-back component</label></p>
+<p><input id="keyupLoopBack" (keyup)="0" #box> <span>{{box.value}}</span></p>
