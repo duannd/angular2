@@ -1,0 +1,24 @@
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+
+import {LifecycleHooksRoutingModule} from './lifecycle-hooks-routing.module';
+import {PeekABooComponent} from './peek-a-boo/peek-a-boo.component';
+import {LifecycleHooksComponent} from './lifecycle-hooks.component';
+import { SpyComponent } from './spy/spy.component';
+import { PeekABooParentComponent } from './peek-a-boo-parent/peek-a-boo-parent.component';
+
+
+@NgModule({
+  declarations: [
+    PeekABooComponent,
+    LifecycleHooksComponent,
+    SpyComponent,
+    PeekABooParentComponent,
+  ],
+  imports: [
+    CommonModule,
+    LifecycleHooksRoutingModule
+  ]
+})
+export class LifecycleHooksModule {
+}
