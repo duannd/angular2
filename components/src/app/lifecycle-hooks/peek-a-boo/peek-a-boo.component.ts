@@ -30,6 +30,7 @@ export class PeedABoo implements OnInit {
   }
 }
 
+// tslint:disable-next-line:no-conflicting-lifecycle
 @Component({
   selector: 'app-peek-a-boo',
   templateUrl: './peek-a-boo.component.html',
