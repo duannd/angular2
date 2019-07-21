@@ -1,1 +1,15 @@
 <p>peek-a-boo-parent works!</p>
+<div class="parent" style="background: moccasin">
+  <h2>Peek a Boo</h2>
+  <button (click)="toggleChild()">
+    {{hasChild ? 'Destroy' : 'Create'}} PeekABooComponent
+  </button>
+
+  <button (click)="updateHero()" [hidden]="!hasChild">Update Hero</button>
+
+  <app-peek-a-boo *ngIf="hasChild" [name]="heroName"></app-peek-a-boo>
+
+  <h4>-- Lifecycle Hook Log</h4>
+  <div *ngFor="let msg of hookLog">{{msg}}</div>
+
+</div>
