@@ -6,6 +6,7 @@ import {PeekABooComponent} from './peek-a-boo/peek-a-boo.component';
 import {LifecycleHooksComponent} from './lifecycle-hooks.component';
 import { SpyComponent } from './spy/spy.component';
 import { PeekABooParentComponent } from './peek-a-boo-parent/peek-a-boo-parent.component';
+import { SpyDirective } from './spy.directive';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { PeekABooParentComponent } from './peek-a-boo-parent/peek-a-boo-parent.c
     LifecycleHooksComponent,
     SpyComponent,
     PeekABooParentComponent,
+    SpyDirective,
   ],
   imports: [
     CommonModule,
