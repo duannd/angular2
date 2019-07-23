@@ -5,10 +5,18 @@ import {ComponentInteractionRoutingModule} from './component-interaction-routing
 import { InteractionComponent } from './interaction.component';
 import { HeroParentComponent } from './hero-parent.component';
 import { HeroChildComponent } from './hero-child.component';
+import { NameChildComponent } from './name-child.component';
+import { NameParentComponent } from './name-parent.component';
 
 
 @NgModule({
-  declarations: [InteractionComponent, HeroParentComponent, HeroChildComponent],
+  declarations: [
+    InteractionComponent,
+    HeroParentComponent,
+    HeroChildComponent,
+    NameChildComponent,
+    NameParentComponent,
+  ],
   imports: [
     CommonModule,
     ComponentInteractionRoutingModule
