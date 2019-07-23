@@ -7,6 +7,7 @@ import {DisplayingDataComponent} from './displaying-data/displaying-data.compone
 import {TemplateModule} from './template/template.module';
 import {UserInputComponent} from './user-input/user-input.component';
 import {LifecycleHooksModule} from './lifecycle-hooks/lifecycle-hooks.module';
+import {ComponentInteractionModule} from './component-interaction/component-interaction.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {LifecycleHooksModule} from './lifecycle-hooks/lifecycle-hooks.module';
     BrowserModule,
     TemplateModule,
     LifecycleHooksModule,
+    ComponentInteractionModule,
     AppRoutingModule
   ],
   providers: [],
