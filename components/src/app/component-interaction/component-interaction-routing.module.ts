@@ -7,6 +7,7 @@ import {VersionParentComponent} from './version-parent.component';
 import {VoteTakerComponent} from './vote-taker.component';
 import {CountdownLocalVarParentComponent} from './countdown-local-var-parent.component';
 import {CountdownViewChildComponent} from './countdown-view-child.component';
+import {MissionControlComponent} from './mission-control.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
       {path: 'listen-child-event', component: VoteTakerComponent},
       {path: 'interacts-child-via-local-variable', component: CountdownLocalVarParentComponent},
       {path: 'call-an-view-child', component: CountdownViewChildComponent},
+      {path: 'communicate-via-a-service', component: MissionControlComponent}
     ]
   }
 ];

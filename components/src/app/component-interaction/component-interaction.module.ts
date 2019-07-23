@@ -14,6 +14,8 @@ import { VoteTakerComponent } from './vote-taker.component';
 import { CountdownTimerComponent } from './countdown-timer.component';
 import { CountdownLocalVarParentComponent } from './countdown-local-var-parent.component';
 import { CountdownViewChildComponent } from './countdown-view-child.component';
+import { AstronautComponent } from './astronaut.component';
+import { MissionControlComponent } from './mission-control.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { CountdownViewChildComponent } from './countdown-view-child.component';
     CountdownTimerComponent,
     CountdownLocalVarParentComponent,
     CountdownViewChildComponent,
+    AstronautComponent,
+    MissionControlComponent,
   ],
   imports: [
     CommonModule,
