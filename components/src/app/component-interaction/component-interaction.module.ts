@@ -11,6 +11,8 @@ import { VersionChildComponent } from './version-child.component';
 import { VersionParentComponent } from './version-parent.component';
 import { VoterComponent } from './voter.component';
 import { VoteTakerComponent } from './vote-taker.component';
+import { CountdownTimerComponent } from './countdown-timer.component';
+import { CountdownLocalVarParentComponent } from './countdown-local-var-parent.component';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { VoteTakerComponent } from './vote-taker.component';
     VersionParentComponent,
     VoterComponent,
     VoteTakerComponent,
+    CountdownTimerComponent,
+    CountdownLocalVarParentComponent,
   ],
   imports: [
     CommonModule,
