@@ -13,6 +13,7 @@ import { VoterComponent } from './voter.component';
 import { VoteTakerComponent } from './vote-taker.component';
 import { CountdownTimerComponent } from './countdown-timer.component';
 import { CountdownLocalVarParentComponent } from './countdown-local-var-parent.component';
+import { CountdownViewChildComponent } from './countdown-view-child.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { CountdownLocalVarParentComponent } from './countdown-local-var-parent.c
     VoteTakerComponent,
     CountdownTimerComponent,
     CountdownLocalVarParentComponent,
+    CountdownViewChildComponent,
   ],
   imports: [
     CommonModule,
