@@ -4,6 +4,7 @@ import {InteractionComponent} from './interaction.component';
 import {HeroParentComponent} from './hero-parent.component';
 import {NameParentComponent} from './name-parent.component';
 import {VersionParentComponent} from './version-parent.component';
+import {VoteTakerComponent} from './vote-taker.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
     children: [
       {path: 'pass-data', component: HeroParentComponent},
       {path: 'intercept-by-setter', component: NameParentComponent},
-      {path: 'intercept-by-onchange', component: VersionParentComponent}
+      {path: 'intercept-by-onchange', component: VersionParentComponent},
+      {path: 'listen-child-event', component: VoteTakerComponent}
     ]
   }
 ];
