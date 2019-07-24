@@ -1,6 +1,7 @@
-import {Component, ComponentFactoryResolver, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, ComponentFactoryResolver, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {AdItem} from './ad-item';
 import {AdDirective} from './ad.directive';
+import {AdComponent} from './ad.component';
 
 @Component({
   selector: 'app-ad-banner',
@@ -10,9 +11,9 @@ import {AdDirective} from './ad.directive';
           <ng-template appAd></ng-template>
       </div>
   `,
-  styles: []
+  styleUrls: ['./dynamic-loader.component.css']
 })
-export class AdBannerComponent implements OnInit {
+export class AdBannerComponent implements OnInit, OnDestroy {
 
   @Input() ads: AdItem[];
   currentAdIndex = -1;
@@ -24,12 +25,28 @@ export class AdBannerComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loadComponent();
+    this.getAds();
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
   }
 
   loadComponent() {
     this.currentAdIndex = (this.currentAdIndex + 1) % this.ads.length;
     const adItem = this.ads[this.currentAdIndex];
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(adItem.component);
+    const viewContainerRef = this.adHost.viewContainerRef;
+    viewContainerRef.clear();
+    const componentRef = viewContainerRef.createComponent(componentFactory);
+    (<AdComponent> componentRef.instance).data = adItem.data;
+  }
 
+  getAds() {
+    this.interval = setInterval(() => {
+      this.loadComponent();
+    }, 3000);
   }
 
 }

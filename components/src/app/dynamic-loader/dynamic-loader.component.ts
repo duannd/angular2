@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AdItem} from './ad-item';
+import {AdService} from './ad.service';
 
 @Component({
   selector: 'app-dynamic-loader',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DynamicLoaderComponent implements OnInit {
 
-  constructor() { }
+  adItems: AdItem[];
+
+  constructor(private adService: AdService) {
+  }
 
   ngOnInit() {
+    this.adItems = this.adService.getAds();
   }
 
 }
