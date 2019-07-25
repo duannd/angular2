@@ -14,6 +14,10 @@ import {AdBannerComponent} from './dynamic-loader/ad-banner.component';
 import {HeroJobAdComponent} from './dynamic-loader/hero-job-ad.component';
 import {HeroProfileComponent} from './dynamic-loader/hero-profile.component';
 import {AdService} from './dynamic-loader/ad.service';
+import { AngularElementsComponent } from './angular-elements/angular-elements.component';
+import {PopupService} from './angular-elements/popup.service';
+import { PopupComponent } from './angular-elements/popup.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,21 +28,26 @@ import {AdService} from './dynamic-loader/ad.service';
     AdDirective,
     AdBannerComponent,
     HeroJobAdComponent,
-    HeroProfileComponent
+    HeroProfileComponent,
+    AngularElementsComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
     TemplateModule,
     LifecycleHooksModule,
     ComponentInteractionModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   entryComponents: [
     HeroJobAdComponent,
     HeroProfileComponent,
+    PopupComponent,
   ],
   providers: [
-    AdService
+    AdService,
+    PopupService
   ],
   bootstrap: [AppComponent]
 })
