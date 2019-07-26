@@ -18,6 +18,8 @@ import { AngularElementsComponent } from './angular-elements/angular-elements.co
 import {PopupService} from './angular-elements/popup.service';
 import { PopupComponent } from './angular-elements/popup.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
+import { HighlightDirective } from './attribute-directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     HeroJobAdComponent,
     HeroProfileComponent,
     AngularElementsComponent,
-    PopupComponent
+    PopupComponent,
+    AttributeDirectivesComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
