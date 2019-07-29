@@ -22,6 +22,7 @@ import {AttributeDirectivesComponent} from './attribute-directives/attribute-dir
 import {HighlightDirective} from './attribute-directives/highlight.directive';
 import {StructuralDirectivesComponent} from './structural-directives/structural-directives.component';
 import {UnlessDirective} from './structural-directives/unless.directive';
+import {PipesModule} from './pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import {UnlessDirective} from './structural-directives/unless.directive';
     TemplateModule,
     LifecycleHooksModule,
     ComponentInteractionModule,
+    PipesModule,
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
