@@ -1,0 +1,49 @@
+<p *ngIf="true">
+  Expression is true and ngIf is true.
+  This paragraph is in the DOM.
+</p>
+<p *ngIf="false">
+  Expression is false and ngIf is false.
+  This paragraph is not in the DOM.
+</p>
+<p [style.display]="'block'">
+  Expression sets display to "block".
+  This paragraph is visible.
+</p>
+<p [style.display]="'none'">
+  Expression sets display to "none".
+  This paragraph is hidden but still in the DOM.
+</p>
+<hr />
+<h2 id="ngFor">NgFor</h2>
+<div *ngFor="let hero of heroes; let i=index; let odd=odd; trackBy: trackById" [class.odd]="odd">
+  ({{i}}) {{hero.name}}
+</div>
+
+<ng-template ngFor let-hero [ngForOf]="heroes" let-i="index" let-odd="odd" [ngForTrackBy]="trackById">
+  <div [class.odd]="odd">({{i}}) {{hero.name}}</div>
+</ng-template>
+
+<hr/>
+<h2>Inside NgSwitch directives</h2>
+<div [ngSwitch]="hero.id">
+  <div *ngSwitchCase="0">id = 0</div>
+  <div *ngSwitchCase="1">id = 1</div>
+  <div *ngSwitchDefault>id != 0 && id != 1</div>
+</div>
+
+<hr />
+<h2>Write a structural directive</h2>
+<p>The condition is currently
+  <span [ngClass]="{ 'a': !condition, 'b': condition, 'unless': true }">{{condition}}</span>.
+  <button (click)="condition = !condition" [ngClass] = "{ 'a': condition, 'b': !condition }" >
+    Toggle condition to {{condition ? 'false' : 'true'}}</button>
+</p>
+<p *appUnless="condition" class="unless a">
+  (A) This paragraph is displayed because the condition is false.
+</p>
+
+<p *appUnless="!condition" class="unless b">
+  (B) Although the condition is true,
+  this paragraph is displayed because appUnless is set to false.
+</p>

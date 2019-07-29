@@ -14,12 +14,14 @@ import {AdBannerComponent} from './dynamic-loader/ad-banner.component';
 import {HeroJobAdComponent} from './dynamic-loader/hero-job-ad.component';
 import {HeroProfileComponent} from './dynamic-loader/hero-profile.component';
 import {AdService} from './dynamic-loader/ad.service';
-import { AngularElementsComponent } from './angular-elements/angular-elements.component';
+import {AngularElementsComponent} from './angular-elements/angular-elements.component';
 import {PopupService} from './angular-elements/popup.service';
-import { PopupComponent } from './angular-elements/popup.component';
+import {PopupComponent} from './angular-elements/popup.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
-import { HighlightDirective } from './attribute-directives/highlight.directive';
+import {AttributeDirectivesComponent} from './attribute-directives/attribute-directives.component';
+import {HighlightDirective} from './attribute-directives/highlight.directive';
+import {StructuralDirectivesComponent} from './structural-directives/structural-directives.component';
+import {UnlessDirective} from './structural-directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { HighlightDirective } from './attribute-directives/highlight.directive';
     AngularElementsComponent,
     PopupComponent,
     AttributeDirectivesComponent,
-    HighlightDirective
+    HighlightDirective,
+    StructuralDirectivesComponent,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
