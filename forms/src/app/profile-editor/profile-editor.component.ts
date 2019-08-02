@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormArray, FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-profile-editor',
@@ -8,21 +8,35 @@ import {FormControl, FormGroup} from '@angular/forms';
 })
 export class ProfileEditorComponent implements OnInit {
 
-  profileForm = new FormGroup({
-    firstName: new FormControl('Danny'),
-    lastName: new FormControl('Nguyen'),
-    address: new FormGroup({
-      street: new FormControl(''),
-      city: new FormControl(''),
-      state: new FormControl(''),
-      zip: new FormControl('')
-    }),
-  });
+  // profileForm = new FormGroup({
+  //   firstName: new FormControl('Danny'),
+  //   lastName: new FormControl('Nguyen'),
+  //   address: new FormGroup({
+  //     street: new FormControl(''),
+  //     city: new FormControl(''),
+  //     state: new FormControl(''),
+  //     zip: new FormControl('')
+  //   }),
+  // });
+  profileForm: FormGroup;
 
-  constructor() {
+  constructor(private formBuilder: FormBuilder) {
   }
 
   ngOnInit() {
+    this.profileForm = this.formBuilder.group({
+      firstName: ['', Validators.required],
+      lastName: 'Ng',
+      address: this.formBuilder.group({
+        street: '',
+        city: '',
+        state: '',
+        zip: ''
+      }),
+      aliases: this.formBuilder.array([
+        this.formBuilder.control('')
+      ])
+    });
   }
 
   onSubmit() {
@@ -37,4 +51,13 @@ export class ProfileEditorComponent implements OnInit {
       }
     });
   }
+
+  get aliases() {
+    return this.profileForm.get('aliases') as FormArray;
+  }
+
+  addAlias() {
+    this.aliases.push(this.formBuilder.control(''));
+  }
+
 }
