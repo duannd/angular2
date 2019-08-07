@@ -5,6 +5,7 @@ import {AbstractControl, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn
 /** A hero's name can't match the given regular expression */
 export function forbiddenNameValidator(nameRegex: RegExp): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
+    console.log('forbiddenNameValidator validating...');
     const forbidden = nameRegex.test(control.value);
     return forbidden ? {forbiddenName: {value: control.value}} : null;
   };
@@ -12,6 +13,8 @@ export function forbiddenNameValidator(nameRegex: RegExp): ValidatorFn {
 
 @Directive({
   selector: '[appForbiddenName]',
+  // Angular recognizes the directive's role in the validation process because the directive registers itself
+  // with the NG_VALIDATORS provider, a provider with an extensible collection of validators.
   providers: [
     {
       provide: NG_VALIDATORS,
