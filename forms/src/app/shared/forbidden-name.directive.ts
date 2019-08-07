@@ -5,7 +5,6 @@ import {AbstractControl, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn
 /** A hero's name can't match the given regular expression */
 export function forbiddenNameValidator(nameRegex: RegExp): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
-    console.log('forbiddenNameValidator validating...');
     const forbidden = nameRegex.test(control.value);
     return forbidden ? {forbiddenName: {value: control.value}} : null;
   };

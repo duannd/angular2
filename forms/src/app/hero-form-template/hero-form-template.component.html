@@ -1,5 +1,5 @@
 <h2>Template-Driven Form</h2>
-<form #heroForm="ngForm">
+<form #heroForm="ngForm" appIdentityRevealed>
   <div [hidden]="heroForm.submitted">
     <div class="cross-validation"
          [class.cross-validation-error]="heroForm.errors?.identityRevealed && (heroForm.touched || heroForm.dirty)">
@@ -20,6 +20,9 @@
         <label for="alterEgo">Alter Ego</label>
         <input class="form-control" id="alterEgo" name="alterEgo" #alterEgo="ngModel" [(ngModel)]="hero.alterEgo"
                [ngModelOptions]="{updateOn: 'blur'}">
+      </div>
+      <div *ngIf="heroForm.errors?.identityRevealed && (heroForm.touched || heroForm.dirty)" class="cross-validation-error-message alert alert-danger">
+        Name cannot match alter ego.
       </div>
     </div>
     <div class="form-group">

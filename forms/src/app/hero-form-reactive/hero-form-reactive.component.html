@@ -19,6 +19,9 @@
         <label for="alterEgo">Alter Ego</label>
         <input id="alterEgo" class="form-control" formControlName="alterEgo">
       </div>
+      <div *ngIf="heroForm.errors?.identityRevealed && (heroForm.touched || heroForm.dirty)" class="cross-validation-error-message alert alert-danger">
+        Name cannot match alter ego.
+      </div>
     </div>
     <div class="form-group">
       <label for="power">Hero Power</label>

@@ -1,7 +1,6 @@
 import {Directive} from '@angular/core';
 import {AbstractControl, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn} from '@angular/forms';
 
-
 /** A hero's name can't match the hero's alter ego */
 export const identityRevealedValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
   const name = control.get('name');
@@ -25,7 +24,6 @@ export class IdentityRevealedDirective implements Validator {
   }
 
   validate(control: AbstractControl): ValidationErrors | null {
-    console.log('IdentityRevealedDirective on validating');
     return identityRevealedValidator(control);
   }
 
