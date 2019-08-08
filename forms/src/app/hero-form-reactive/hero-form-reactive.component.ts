@@ -26,7 +26,9 @@ export class HeroFormReactiveComponent implements OnInit {
         Validators.maxLength(10),
         forbiddenNameValidator(/duan/i)
       ]),
-      alterEgo: new FormControl(this.hero.alterEgo, []),
+      alterEgo: new FormControl(this.hero.alterEgo, {
+        asyncValidators: this.alterEgoValidator.validate.bind(this.alterEgoValidator)
+      }),
       power: new FormControl(this.hero.power, [Validators.required])
     }, {validators: identityRevealedValidator});
   }

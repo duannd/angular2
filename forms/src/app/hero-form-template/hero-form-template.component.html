@@ -19,7 +19,13 @@
       <div class="form-group">
         <label for="alterEgo">Alter Ego</label>
         <input class="form-control" id="alterEgo" name="alterEgo" #alterEgo="ngModel" [(ngModel)]="hero.alterEgo"
-               [ngModelOptions]="{updateOn: 'blur'}">
+               [ngModelOptions]="{updateOn: 'blur'}" appUniqueAlterEgo>
+        <div *ngIf="alterEgo.pending">Validating...</div>
+        <div *ngIf="alterEgo.invalid" class="alert alert-danger alter-ego-errors">
+          <div *ngIf="alterEgo.errors?.uniqueAlterEgo">
+            Alter ego is already taken.
+          </div>
+        </div>
       </div>
       <div *ngIf="heroForm.errors?.identityRevealed && (heroForm.touched || heroForm.dirty)" class="cross-validation-error-message alert alert-danger">
         Name cannot match alter ego.

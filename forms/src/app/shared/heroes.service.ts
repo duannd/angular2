@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
 import {delay} from 'rxjs/operators';
 
-const ALTER_EGOS = ['Danny'];
+const ALTER_EGOS = ['Danny', 'Duan', 'DK'];
 
 @Injectable({
   providedIn: 'root'
