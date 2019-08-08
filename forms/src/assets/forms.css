@@ -6,3 +6,10 @@
   border-left: 5px solid #a94442; /* red */
 }
 
+.errorMessage{
+  color:red;
+}
+
+.form-row{
+  margin-top: 10px;
+}

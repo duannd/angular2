@@ -14,6 +14,9 @@ import {ForbiddenNameDirective} from './shared/forbidden-name.directive';
 import {IdentityRevealedDirective} from './shared/identity-revealed.directive';
 import {HeroFormTemplateComponent} from './hero-form-template/hero-form-template.component';
 import {HeroFormReactiveComponent} from './hero-form-reactive/hero-form-reactive.component';
+import { DynamicFormsComponent } from './dynamic-forms/dynamic-forms.component';
+import { DynamicFormsChildComponent } from './dynamic-forms/dynamic-forms-child.component';
+import { DynamicFormsQuestionComponent } from './dynamic-forms/dynamic-forms-question.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import {HeroFormReactiveComponent} from './hero-form-reactive/hero-form-reactive
     ForbiddenNameDirective,
     IdentityRevealedDirective,
     HeroFormTemplateComponent,
-    HeroFormReactiveComponent
+    HeroFormReactiveComponent,
+    DynamicFormsComponent,
+    DynamicFormsChildComponent,
+    DynamicFormsQuestionComponent
   ],
   imports: [
     BrowserModule,
