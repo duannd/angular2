@@ -1,2 +1,16 @@
-<p>Observables Basic works!</p>
-<button type="button" (click)="unsubscribe()">Unsubscribe Locations</button>
+<h2>Observables Basic works!</h2>
+<div>
+  <button type="button" (click)="subscribeMyObservable()">Subscribe myObservable</button>
+  <button type="button" (click)="unsubscribeMyObservable()" [disabled]="!mySubscription">Unsubscribe myObservable
+  </button>
+</div>
+<div>
+  <button (click)="subscribeSequence()">Subscribe SequenceObservable</button>
+  <button (click)="unsubscribeSequence()" [disabled]="!sequenceSubscription">Unsubscribe SequenceObservable</button>
+</div>
+<hr/>
+<div>
+  <label for="name">From Event Observable</label>
+  <input id="name" value="">
+  <button (click)="fromEventSubscription.unsubscribe()">Unsubscribe FromEventObservable</button>
+</div>
