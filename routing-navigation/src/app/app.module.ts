@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {CrisisListComponent} from './crisis-list/crisis-list.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {HeroesModule} from './heroes/heroes.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {HeroesModule} from './heroes/heroes.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HeroesModule,
     AppRoutingModule,
   ],
