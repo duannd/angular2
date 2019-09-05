@@ -8,6 +8,7 @@ import {HeroesModule} from './heroes/heroes.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ComposeMessageComponent} from './compose-message/compose-message.component';
 import {FormsModule} from '@angular/forms';
+import {AuthModule} from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {FormsModule} from '@angular/forms';
     FormsModule,
     BrowserAnimationsModule,
     HeroesModule,
+    AuthModule,
     AppRoutingModule,
   ],
   providers: [],
